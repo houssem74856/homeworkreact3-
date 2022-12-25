@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import AddNewTaskBtn from './AddNewTaskBtn';
+import TodoList from './TodoList';
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AddNewTaskBtn />
+      <div className='TodoLists'>
+        <TodoList listTitle='To Do' hala={"todo"} next={true} previous={false}/>
+        <TodoList listTitle='Currently Doing' hala={"currently"} next={true} previous={true}/>
+        <TodoList listTitle='Completed' hala={"completed"} next={false} previous={true}/>
+      </div>
     </div>
   );
 }
